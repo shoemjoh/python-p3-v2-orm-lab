@@ -26,7 +26,7 @@ class Review:
     
     @year.setter
     def year(self, year):
-        if type(year) is int and (year > 2000):
+        if isinstance(year, int) and year >= 2000:
             self._year = year
         else:
             raise ValueError(
